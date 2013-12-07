@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="ScriptCS-GUI : A simple GUI toolkit for ScriptCS" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ScriptCS-GUI</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/hemme/scriptcs-gui">View on GitHub</a>
+
+          <h1 id="project_title">ScriptCS-GUI</h1>
+          <h2 id="project_tagline">A simple GUI toolkit for ScriptCS</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/hemme/scriptcs-gui/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/hemme/scriptcs-gui/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="scriptcs-gui" class="anchor" href="#scriptcs-gui"><span class="octicon octicon-link"></span></a>scriptcs-gui</h1>
+
+<p>A simple GUI toolkit for ScriptCS</p>
+
+<p>The following script shows you how to read a folder name from the <i>command argument</i> and use it with the <b>OpenFileDialog</b> helper.</p>
+
+<pre>
+#load "../script/dialogz.csx"
+// Run with:
+// scriptcs -script "dialogz-demo.csx" -- c:\some-path
+
+var folder = ScriptArgs.FirstOrDefault(); 
+var path = OpenFileDialog(folder);
+Console.WriteLine("You selected: '{0}'.", path ?? "nothing");
+</pre>
+
+<p>
+Launch the script as shown in the picture and enjoy your interaction... :)
+</p>
+
+<p><a href="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"><img border="0" src="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"></a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ScriptCS-GUI maintained by <a href="https://github.com/hemme">hemme</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
