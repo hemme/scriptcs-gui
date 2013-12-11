@@ -36,15 +36,13 @@
 
 <p>A simple GUI toolkit for ScriptCS</p>
 
-<p>The following script shows you how to read a folder name from the <i>command argument</i> and use it with the <b>OpenFileDialog</b> helper.</p>
+<p>The following script shows you how to read a folder name from the <i>command argument</i> and use it with the <b>Gui.OpenFileDialog</b> helper.</p>
 
 <pre>
-#load "../script/dialogz.csx"
-// Run with:
-// scriptcs -script "dialogz-demo.csx" -- c:\some-path
+#load "../script/gui.csx"
 
 var folder = ScriptArgs.FirstOrDefault(); 
-var path = OpenFileDialog(folder);
+var path = Gui.OpenFileDialog(folder);
 Console.WriteLine("You selected: '{0}'.", path ?? "nothing");
 </pre>
 
@@ -52,9 +50,23 @@ Console.WriteLine("You selected: '{0}'.", path ?? "nothing");
 Launch the script as shown in the picture and enjoy your interaction... :)
 </p>
 
-<p><a href="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"><img border="0" src="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"></a></p>
-      </section>
-    </div>
+<p><img border="0" src="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"></p>
+
+ <p>
+ Other things you can do with ScriptCS-GUI:
+ <ul>
+	<li>Open a PopUp Windows Form from the console and programmatically add controls to it while both the console and the form are responsive!
+	<li>Open a Drawing Windows Form from the console and draw on it from the console using classic Windows.Drawing commands.
+	<li>More to come... :) </li>
+</ul>
+ </p>
+ <p>
+ <img border="0" src="http://4.bp.blogspot.com/-fKORlIvqq7A/UqjwfsFoFBI/AAAAAAAAA9E/_1ZpP8b1IVc/s1600/scriptcs-demo-002.png">
+ </p>
+
+
+</section>
+</div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
@@ -63,8 +75,6 @@ Launch the script as shown in the picture and enjoy your interaction... :)
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
 
   </body>
 </html>
