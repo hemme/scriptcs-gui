@@ -36,8 +36,9 @@ INFO: Packages.config successfully created!
 C:\git\scriptcs-gui\demo>scriptcs
 scriptcs (ctrl-c to exit)
 
-> #load "gui.csx"
-> var f = Gui.PopUp();
+> using System.Windows.Forms;
+> var gui = Require<Gui>();
+> var f = gui.PopUp();
 > f.TopMost = true;
 true
 > f.Sta += delegate {
