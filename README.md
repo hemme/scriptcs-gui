@@ -6,7 +6,14 @@ Its main aim is to help the user create fully interactive forms from the REPL wi
 Thanks to a bunch of Windows API's (declared in Native.dll assembly) **ScriptCS-GUI** hides you the complexity of instanciating independent windows forms from the REPL and lets you enjoy the rest.
 
 ##The toolkit
-The following helpers are declared by the static class `Gui` (`gui.csx`). 
+Script pack url: `https://www.nuget.org/packages/ScriptCs.Gui`.
+Installation: 
+
+```batchfile
+c:\anyfolder>scriptcs -install ScriptCs.Gui
+```
+
+The following helpers are declared by the ~~static~~ class `Gui`.
 
 * `Gui.OpenFileDialog()`: opens a classic Open File Dialog and return the path of the selected file.
 * `Gui.SaveFileDialog()`: acts similar to OpenFileDialog()...
@@ -17,7 +24,16 @@ For a full demo see `.\demo\gui-demo.csx`.
 
 ###Example: creating Windows Form pop-up from the ScriptCS REPL
 ```batchfile
-C:\git\scriptcs-gui\script>scriptcs
+C:\git\scriptcs-gui\demo>scriptcs -install ScriptCs.Gui
+INFO: Installing packages...
+INFO: Installed: scriptcs.gui
+INFO: Installation completed successfully.
+Initiated saving packages into packages.config...
+INFO: Added ScriptCs.Contracts, Version 0.8.1, .NET 4.5
+INFO: Added ScriptCs.Gui, Version 0.1.0.1, .NET 4.5
+INFO: Packages.config successfully created!
+
+C:\git\scriptcs-gui\demo>scriptcs
 scriptcs (ctrl-c to exit)
 
 > #load "gui.csx"
@@ -40,9 +56,8 @@ f.Controls.Add(t);
 ```
 
 ##What's next?
-At the moment **ScriptCS-GUI** is a collection of .csx scripts; I'm going to change the deployment format and distribute it as a **Script Pack** soon.
 
-I will also add more helpers. For instance:
+I will add more helpers. For instance:
 * a live chart window (think about creating a chart with a couple of command and injecting a delegate to the chart so that it will be refreshed automagically in the background).
 * a watch window (similar to Visual Studio)
 
