@@ -1,6 +1,5 @@
-#load "../script/gui.csx"
-// Run with:
-// scriptcs -script "gui-demo.csx" -- c:\some-path
+var gui = Require<Gui>();
+
 
 bool done = false;
 while(!done) {
@@ -21,13 +20,13 @@ switch(option.KeyChar) {
 	case '1':
 		Console.WriteLine(" => emulating a modal window.");
 		var folder = ScriptArgs.FirstOrDefault();
-		var path = Gui.OpenFileDialog(folder, join:true);
+		var path = gui.OpenFileDialog(folder, join:true);
 		Console.WriteLine("\r\nYou selected: '{0}'.", path ?? "nothing");
 		break;
 		
 	case '2':
 	case '3':
-		var f = Gui.PopUp();
+		var f = gui.PopUp();
 		f.Sta.Start();
 		
 		Console.WriteLine(" => a non modal pop-up.");
@@ -65,7 +64,7 @@ switch(option.KeyChar) {
 			Console.WriteLine("You can use the console too.\r\nTo run again the script write #load \"gui-demo.csx\".");
 			done = true;
 		}
-		var d = Gui.Drawing();
+		var d = gui.Drawing();
 		
 		var th = new Thread(new ThreadStart(
 				delegate{
