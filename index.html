@@ -34,22 +34,25 @@
         <h1>
 <a name="scriptcs-gui" class="anchor" href="#scriptcs-gui"><span class="octicon octicon-link"></span></a>ScriptCS-GUI</h1>
 
-<p><b>ScriptCS-GUI</b> is a simple GUI toolkit for <b>ScriptCS</b>. Its main aim is to help the user create fully interactive forms from the REPL without preventing her to use the REPL after the forms are run (on the contrary, tipically, creating and running a form from the console hangs the console). Thanks to a bunch of Windows API's (declared in <i>Native.dll</i> assembly) <b>ScriptCS-GUI</b> hides you the complexity of instantiating independent windows forms from the REPL and lets you enjoy the rest.</p>
-
-<p>At the moment the static class <g>Gui</g> declares the following helpers:
+<p><b>ScriptCS-GUI</b> is a simple GUI toolkit for <b>ScriptCS</b>. Its main aim is to help the user create fully interactive forms from the REPL without preventing her to use the REPL after the forms are run (on the contrary, tipically, creating and running a form from the console hangs the console). Thanks to a bunch of Windows API's <b>ScriptCS-GUI</b> hides you the complexity of instantiating independent windows forms from the REPL and lets you enjoy the rest.</p>
+<p>At the moment the class <g>Gui</g> declares the following helpers:
 <ul>
-<li><b>Gui.OpenFileDialog()</b>: opens a classic Open File Dialog and return the path of the selected file.
-<li><b>Gui.SaveFileDialog()</b>: acts similar to OpenFileDialog()...
-<li><b>Gui.PopUp()</b>: opens a pop-up and returns a form object. You can use its Sta.Enqueue(action) method to inject code in the form's main thread (e.g. to add controls at runtime) while working inside the console!
-<li><b>Gui.Drawing()</b>: opens a drawing form and returns the Graphics object you can use to draw on the form (the console stays responsive in this case too!)
+<li><b>Gui.OpenFileDialog()</b>: open a classic Open File Dialog and return the path of the selected file.
+<li><b>Gui.SaveFileDialog()</b>: act similar to OpenFileDialog()...
+<li><b>Gui.PopUp()</b>: open a pop-up and returns a form object. You can use its Sta.Enqueue(action) method to inject code in the form's main thread (e.g. to add controls at runtime) while working inside the console!
+<li><b>Gui.Drawing()</b>: open a drawing form and returns the Graphics object you can use to draw on the form (the console stays responsive in this case too!)
 </ul>
 </p>
-<p>Here's how to open an Open File Dialog:</p>
+<p>Here's how to open an Open File Dialog. First install ScriptCS-GUI locally from NuGet with:</p>
 <pre>
-#load "../script/gui.csx"
+C:/anyfolder>scriptcs -install ScriptCs.Gui
+</pre>
+<p>Then enter scriptcs REPL and type the following.
+</p>
+<pre>
+var gui = Require&lt;Gui&gt;();
 
-var folder = ScriptArgs.FirstOrDefault(); 
-var path = Gui.OpenFileDialog(folder);
+var path = gui.OpenFileDialog();
 Console.WriteLine("You selected: '{0}'.", path ?? "nothing");
 </pre>
 
@@ -60,10 +63,10 @@ Launch the script as shown in the picture and enjoy your interaction... :)
 <p><img border="0" src="http://1.bp.blogspot.com/-TfLEMy04TsU/UqLiQixgBQI/AAAAAAAAA8o/dvlM8CweArM/s1600/scriptcs-demo-001.png"></p>
 
  <p>
- The demo in <i>./demo/gui.demo.csx</i> shows you:
+ The demo in <i>./demo/gui-demo.csx</i> shows you:
  <ul>
 	<li>how to open a PopUp Windows Form from the console and programmatically add controls to it while both the console and the form are responsive!
-	<li>how tp open a Drawing Windows Form from the console and draw on it from the console using classic Windows.Drawing commands.
+	<li>how to open a Drawing Windows Form from the console and draw on it from the console using classic Windows.Drawing commands.
 	<li>and more... :) </li>
 </ul>
  </p>
