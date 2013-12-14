@@ -1,4 +1,5 @@
-﻿namespace ScriptCS.Gui
+﻿using ScriptCs.Gui;
+namespace ScriptCS.Gui
 {
     public class StaForm : System.Windows.Forms.Form
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     public partial class Gui : IScriptPackContext
     {

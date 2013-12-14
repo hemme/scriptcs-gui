@@ -1,3 +1,7 @@
+using System.Windows.Forms;
+using System.Drawing;
+using System.Threading;
+
 var gui = Require<Gui>();
 
 
@@ -47,7 +51,7 @@ switch(option.KeyChar) {
 					delegate{
 						while(true) {
 							label.Text = DateTime.Now.ToLongTimeString();
-							System.Threading.Thread.Sleep(1000);
+							Thread.Sleep(1000);
 						}}));
 				t.IsBackground = true;
 				t.Start();

@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ScriptCS.Gui")]
+[assembly: AssemblyTitle("ScriptCs.Gui")]
 [assembly: AssemblyDescription("A simple GUI toolkit for ScriptCS.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Marco Mariotti")]
@@ -16,5 +16,5 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("edb0f22b-2ae5-43ca-8f37-8e2a73450beb")]
 
-[assembly: AssemblyVersion("0.1.0.0")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
+[assembly: AssemblyVersion("0.1.0.1")]
+[assembly: AssemblyFileVersion("0.1.0.1")]

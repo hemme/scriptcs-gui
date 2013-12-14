@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     public partial class Gui
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     public class StaQueue
     {

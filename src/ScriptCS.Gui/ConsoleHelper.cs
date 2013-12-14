@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     internal static class ConsoleHelper
     {

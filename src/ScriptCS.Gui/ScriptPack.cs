@@ -1,6 +1,6 @@
 ﻿using ScriptCs.Contracts;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     public class ScriptPack : IScriptPack
     {

@@ -1,6 +1,7 @@
-﻿using System;
+﻿using ScriptCS.Gui;
+using System;
 
-namespace ScriptCS.Gui
+namespace ScriptCs.Gui
 {
     public partial class Gui
     {
