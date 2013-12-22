@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="StaQueue.cs" />
     <Compile Include="User32.cs" />
+    <Compile Include="Watch\ObjectObserver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
