@@ -50,6 +50,7 @@
     <Compile Include="DrawForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gui.Clipboard.cs" />
     <Compile Include="Gui.Sta.cs" />
     <Compile Include="Gui.Dialogs.cs" />
     <Compile Include="Gui.Forms.cs" />
