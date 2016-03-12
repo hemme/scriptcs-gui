@@ -8,37 +8,6 @@ using System.Threading.Tasks;
 
 namespace ScriptCs.Gui.Watch
 {
-    public static class ConsoleObserver
-    {
-        public static void Attach<T>(T src, string propertyName)
-        {
-            var o = new ObjectObserver(src, propertyName);
-            o.PropertyChanged += OnPropertyChanged;
-        }
-
-        public static void Detach<T>(T src)
-        {
-            //TODO
-        }
-
-        private static void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            Console.WriteLine("{0} changed.", e.PropertyName );
-            var pc2 = e as PropertyChangedExEventArgs;
-
-            if (pc2 != null)
-                Console.WriteLine("New value: {0}.", pc2.Value);
-        }
-    }
-
-    public class PropertyChangedExEventArgs : PropertyChangedEventArgs
-    {
-        public PropertyChangedExEventArgs(string name, object value) : base(name)
-        {
-            Value = value;
-        }
-        public object Value { get; private set; }
-    }
 
     internal class ObjectObserver:INotifyPropertyChanged
     {
@@ -61,16 +30,16 @@ namespace ScriptCs.Gui.Watch
 
             while(Source!=null && Source.Target!=null)
             {
+                System.Threading.Thread.Sleep(250);
+
                 if (PropertyChanged!=null) {
                     var currentValue = pGet();
-                    if (currentValue != previousValue)
+                    if (previousValue != currentValue)
                     {
-                        PropertyChanged(this, new PropertyChangedExEventArgs(name, currentValue));
                         previousValue = currentValue;
+                        PropertyChanged(this, new PropertyChangedExEventArgs(name, currentValue));
                     }
                 }
-
-                System.Threading.Thread.Sleep(250);
             }
         }
     }

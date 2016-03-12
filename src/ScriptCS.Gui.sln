@@ -5,6 +5,14 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptCs.Gui", "ScriptCS.Gui\ScriptCs.Gui.csproj", "{9768ABF2-4E86-482F-8700-C6C08B825A20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptCs.Gui.Tests", "ScriptCs.Gui.Tests\ScriptCs.Gui.Tests.csproj", "{D72DBB6E-910B-48F8-91BA-F715E86B9AE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{146AD3E5-6761-4620-9BF8-7CAD371A7B3F}"
+	ProjectSection(SolutionItems) = preProject
+		..\demo\gui-demo.csx = ..\demo\gui-demo.csx
+		..\demo\observer-demo.csx = ..\demo\observer-demo.csx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{9768ABF2-4E86-482F-8700-C6C08B825A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9768ABF2-4E86-482F-8700-C6C08B825A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9768ABF2-4E86-482F-8700-C6C08B825A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72DBB6E-910B-48F8-91BA-F715E86B9AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72DBB6E-910B-48F8-91BA-F715E86B9AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72DBB6E-910B-48F8-91BA-F715E86B9AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72DBB6E-910B-48F8-91BA-F715E86B9AE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
